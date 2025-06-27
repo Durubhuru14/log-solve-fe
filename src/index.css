@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+body {
+  @apply bg-gray-950 box-border overflow-hidden;
+}
+
+@layer components {
+  .toolbox-btn {
+    @apply bg-gray-800 p-2 rounded-lg cursor-pointer text-lg;
+  }
+
+  .quick-actions {
+    @apply p-3 cursor-pointer rounded-md hover:bg-gray-900;
+  }
+
+  .quick-actions:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  .bouncing-balls {
+    @apply size-2 bg-gray-100 rounded-full animate-bounce;
+  }
+
+  
+
+  .antilog-text {
+    color: #ff6188;
+    font-family: "Gochi Hand", cursive;
+  }
+  .number {
+    color: #378dc8 !important;
+    font-family: "Roboto Mono", monospace;
+    margin: 0 2px;
+  }
+
+  .power {
+    font-family: "Gochi Hand", cursive;
+    color: #ff9800;
+    margin: 0 2px;
+  }
+
+  .result-value {
+font-family: "Gochi Hand", cursive;
+    color: #c3e88d;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .curly-brac {
+    color: #c792ea;
+  }
+
+  .sqaure-brac {
+    display: inline;
+    color: #89ddff;
+  }
+
+  .round-brac {
+    display: inline;
+    color: #ffd866;
+  }
+
+  .log {
+    display: inline;
+    font-style: italic;
+    color: #80cbc4;
+    font-family: "Gochi Hand", cursive;
+  }
+
+  .result {
+    font-size: 11pt;
+  }
+}
