@@ -1,4 +1,11 @@
-import { FaEraser, FaPen, FaRedo, FaTrash, FaUndo } from "react-icons/fa";
+import {
+  FaEraser,
+  FaPen,
+  FaRedo,
+  FaTrash,
+  FaUndo,
+  FaHandPaper,
+} from "react-icons/fa";
 import { BiReset } from "react-icons/bi";
 import { IoColorPalette } from "react-icons/io5";
 import { colorSwatches } from "../utils/constants";
@@ -19,6 +26,7 @@ const Toolbar = ({
   canRedo,
 }) => {
   const [isToolBoxOpen, setIsToolBoxOpen] = useState(false);
+
   return (
     <>
       {/* Top quick actions */}
@@ -47,7 +55,7 @@ const Toolbar = ({
         </button>
       </div>
 
-      {/* Bottom toolbox band */}
+      {/* Bottom toolbox */}
       <div
         className={`${
           isToolBoxOpen ? "visible" : "invisible translate-y-1/2 opacity-0"
@@ -71,6 +79,14 @@ const Toolbar = ({
           >
             <FaEraser />
           </button>
+          <button
+            onClick={() => setTool("pan")}
+            disabled={tool === "pan"}
+            className={`toolbox-btn ${tool === "pan" ? "bg-gray-700" : ""}`}
+            title="Pan / Move Canvas"
+          >
+            <FaHandPaper />
+          </button>
         </div>
 
         {/* Stroke width slider */}
@@ -83,6 +99,7 @@ const Toolbar = ({
             value={strokeWidth}
             className="cursor-e-resize"
             onChange={(e) => setStrokeWidth(Number(e.target.value))}
+            disabled={tool === "pan"} // Disable size while panning
           />
           <span>{strokeWidth < 10 ? `0${strokeWidth}` : strokeWidth}px</span>
         </label>
@@ -97,11 +114,13 @@ const Toolbar = ({
               }`}
               style={{ backgroundColor: color }}
               onClick={() => setStrokeColor(color)}
+              disabled={tool === "pan"} // Disable color picking while panning
             />
           ))}
         </div>
       </div>
-      {/* Toggle options for smaller screens */}
+
+      {/* Toolbox toggle for mobile */}
       <button
         type="button"
         className="text-gray-100 fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-gray-800 p-2 rounded-2xl hover:bg-gray-900 cursor-pointer lg:invisible"

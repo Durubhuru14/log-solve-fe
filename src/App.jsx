@@ -78,6 +78,7 @@ const App = () => {
         lines={lines}
         setLines={setLines}
         finalHtml={finalHtml}
+        setFinalHtml={setFinalHtml}
       />
     </>
   );

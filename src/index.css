@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:ital@1&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 
 body {
   @apply bg-gray-950 box-border overflow-hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 @layer components {
@@ -22,11 +24,9 @@ body {
     @apply size-2 bg-gray-100 rounded-full animate-bounce;
   }
 
-  
-
   .antilog-text {
     color: #ff6188;
-    font-family: "Gochi Hand", cursive;
+    font-family: "Lato", sans-serif;
   }
   .number {
     color: #378dc8 !important;
@@ -35,13 +35,13 @@ body {
   }
 
   .power {
-    font-family: "Gochi Hand", cursive;
+    font-family: "Roboto Mono", monospace;
     color: #ff9800;
     margin: 0 2px;
   }
 
   .result-value {
-font-family: "Gochi Hand", cursive;
+    font-family: "Roboto Mono", monospace;
     color: #c3e88d;
     font-style: italic;
     font-weight: bold;
@@ -63,11 +63,9 @@ font-family: "Gochi Hand", cursive;
 
   .log {
     display: inline;
-    font-style: italic;
     color: #80cbc4;
-    font-family: "Gochi Hand", cursive;
+    font-family: "Lato", sans-serif;
   }
-
   .result {
     font-size: 11pt;
   }

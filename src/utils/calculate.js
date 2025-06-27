@@ -90,7 +90,7 @@ export function calculate(mulTerms, divTerms) {
   )}<span class="curly-brac">}</span><br>
 
   ${
-    mulSteps.mul4 && divSteps.div4
+    mulSteps.mul4 || divSteps.div4
       ? `
     = ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
           mulSteps.mul4,
