@@ -2,8 +2,8 @@ import { antilog, simpleNumbersToBarForm } from "../func/index.js";
 import { renderMultiplySteps, renderDivideSteps } from "../template/index.js";
 
 export function calculate(mulTerms, divTerms) {
-  if(!mulTerms) mulTerms = ""
-  if(!divTerms) divTerms = ""
+  if (!mulTerms) mulTerms = "";
+  if (!divTerms) divTerms = "";
   const multiplyTerms = mulTerms.split(",") || [""];
   const divideTerms = divTerms.split(",") || [""];
   let finalHTML;
@@ -70,21 +70,21 @@ export function calculate(mulTerms, divTerms) {
   };
 
   finalHTML = `
-  ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
+  ${FinalNegative} <span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
     mulSteps.mul1,
     divSteps.div1
   )}<span class="curly-brac">}</span><br>
 
   ${
     mulTrigFun || divTrigFun
-      ? `= ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
+      ? `= ${FinalNegative} <span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
           mulSteps.mul2,
           divSteps.div2
         )}<span class="curly-brac">}</span><br>`
       : ""
   }
 
-  = ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
+  = ${FinalNegative} <span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
     mulSteps.mul3,
     divSteps.div3
   )}<span class="curly-brac">}</span><br>
@@ -92,7 +92,7 @@ export function calculate(mulTerms, divTerms) {
   ${
     mulSteps.mul4 || divSteps.div4
       ? `
-    = ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
+    = ${FinalNegative} <span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
           mulSteps.mul4,
           divSteps.div4
         )}<span class="curly-brac">}</span><br>
@@ -103,15 +103,15 @@ export function calculate(mulTerms, divTerms) {
   ${
     divResult === 0
       ? ""
-      : `= ${FinalNegative}<span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
+      : `= ${FinalNegative} <span class="antilog-text">a.log</span><span class="curly-brac">{</span>${formatStep(
           `<span class='number'>${mulResultBarForm}</span>`,
           `<span class='number'>${divResultBarForm}</span>`
         )}<span class="curly-brac">}</span><br>`
   }
 
-  = ${FinalNegative}<span class="antilog-text">a.log</span><p class="round-brac">(</p><span class="number">${finalResultBarForm}</span><p class="round-brac">)</p><br>
+  = ${FinalNegative} <span class="antilog-text">a.log</span><p class="round-brac">(</p><span class="number">${finalResultBarForm}</span><p class="round-brac">)</p><br>
 
-  = ${FinalNegative}<span class="result-value">${antilog(finalResult)}</span>`;
+  = ${FinalNegative} <span class="result-value">${antilog(finalResult)}</span>`;
 
   return finalHTML;
 }

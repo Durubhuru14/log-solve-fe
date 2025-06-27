@@ -1,20 +1,25 @@
 function applyPowerToLog(logStr, power) {
-  const hasOverline = logStr.includes("\u0305");
+  let c, m;
 
-  const cleanedLogStr = logStr.replace(/\u0305/g, "");
-  const [c, m] = cleanedLogStr.split(".");
+  // Remove LaTeX wrappers and spaces
+  const cleaned = logStr
+    .replace(/^\$|\\overline{|\}|\$/g, "") // removes $, \overline{, and }
+    .replace(/\s/g, ""); // remove spaces
 
-  let charNum = parseInt(c);
-  if (hasOverline) {
-    charNum *= -1;
+  if (logStr.includes("\\overline{")) {
+    [c, m] = cleaned.split(".");
+    c = -parseInt(c);
+  } else {
+    [c, m] = cleaned.split(".");
+    c = parseInt(c);
   }
 
   const mant = parseFloat(`0.${m}`) * power;
-  const resultChar = charNum * power + Math.floor(mant);
+  const resultChar = c * power + Math.floor(mant);
   const resultMant = (mant % 1).toFixed(4).slice(2);
 
   if (resultChar < 0) {
-    return `\u0305${Math.abs(resultChar)}.${resultMant}`;
+    return `$\\overline{${Math.abs(resultChar)}}.${resultMant}$`;
   }
   return `${resultChar}.${resultMant}`;
 }

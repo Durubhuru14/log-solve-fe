@@ -28,6 +28,12 @@ const Canvas = ({
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
+    if (window.MathJax) {
+      window.MathJax.typeset();
+    }
+  }, [finalHtml]);
+
+  useEffect(() => {
     const stage = stageRef.current;
     const handleTouchMove = (e) => {
       if (e.touches.length === 2) {
@@ -165,8 +171,9 @@ const Canvas = ({
         }
       );
 
+      console.log(response.data.result);
       const [mul, div] = response.data.result
-        .split("/")
+        .split("÷")
         .map((part) => part.trim());
       const htmlResult = calculate(mul, div);
       setFinalHtml(htmlResult);
@@ -219,7 +226,7 @@ const Canvas = ({
       </Stage>
 
       {finalHtml && (
-        <div className="w-full absolute top-1/2 left-1/2 -translate-1/2 text-gray-100 text-sm sm:text-lg pointer-events-none">
+        <div className="w-full absolute top-1/2 left-1/2 -translate-1/2 text-gray-100 text-lg sm:text-xl pointer-events-none">
           <div
             className="w-fit h-full mx-auto"
             dangerouslySetInnerHTML={{ __html: finalHtml }}

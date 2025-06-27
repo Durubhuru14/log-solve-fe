@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:ital@1&display=swap");
 @import "tailwindcss";
 
@@ -26,22 +25,30 @@ body {
 
   .antilog-text {
     color: #ff6188;
-    font-family: "Lato", sans-serif;
+    font-family: "Gochi Hand", cursive;
   }
   .number {
-    color: #378dc8 !important;
-    font-family: "Roboto Mono", monospace;
+    color: #378dc8;
+font-family: "Gochi Hand", cursive;
     margin: 0 2px;
   }
 
   .power {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Gochi Hand", cursive;
     color: #ff9800;
     margin: 0 2px;
   }
 
+  mjx-container {
+    padding: 0 2px;
+  }
+
+  mjx-container * {
+    font-family: "Gochi Hand", cursive;
+  }
+
   .result-value {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Gochi Hand", cursive;
     color: #c3e88d;
     font-style: italic;
     font-weight: bold;
@@ -64,9 +71,10 @@ body {
   .log {
     display: inline;
     color: #80cbc4;
-    font-family: "Lato", sans-serif;
+    font-family: "Gochi Hand", cursive;
   }
   .result {
     font-size: 11pt;
+    font-family: "Gochi Hand", cursive;
   }
 }

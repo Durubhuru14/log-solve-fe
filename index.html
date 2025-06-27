@@ -4,10 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
     <title>Log and Antilog - OCR Edition</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- MathJax Snippet -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+        chtml: {
+          matchFontHeight: false, // optional
+        },
+        options: {
+          renderActions: {
+            addMenu: [], // disables right-click MathJax context menu
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
