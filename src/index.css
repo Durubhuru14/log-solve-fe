@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:ital@1&display=swap");
 @import "tailwindcss";
 
 body {
-  @apply bg-gray-950 box-border overflow-hidden;
-  font-family: "Poppins", sans-serif;
+  @apply bg-[#111111] box-border overflow-hidden;
+}
+
+@utility text-signature {
+  color: #ff627d
 }
 
 @layer components {
@@ -29,7 +31,7 @@ body {
   }
   .number {
     color: #378dc8;
-font-family: "Gochi Hand", cursive;
+    font-family: "Gochi Hand", cursive;
     margin: 0 2px;
   }
 
