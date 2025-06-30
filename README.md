@@ -1,12 +1,53 @@
-# React + Vite
+# LogSolve - Human-Style Log Solving, Automated
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="./public/logo.svg" width="250"/>
+</p>
 
-Currently, two official plugins are available:
+> ⚠️ **Note:** This is the **frontend** repo of LogSolve.
+> For the full monorepo (frontend + backend), visit:
+> 👉 [https://github.com/Durubhuru14/LogSolve](https://github.com/Durubhuru14/LogSolve)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![App Screenshot](./public/Screenshots.png)
+
+---
+
+## 🧰 Tech Stack
+
+This frontend is built using modern React tooling and canvas drawing capabilities.
+
+### ⚛️ Frameworks & Libraries
+
+- **React 19** – UI library
+- **React DOM**
+- **React Router DOM (v7)** – Routing
+- **React Konva** – Canvas & freehand drawing
+- **Axios** – HTTP client
+- **React Icons** – Icon set
+
+### 🎨 Styling
+
+- **Tailwind CSS** – Utility-first styling
+- **@tailwindcss/vite** – Tailwind integration with Vite
+
+### ⚙️ Tooling
+
+- **Vite** – Fast build/dev tool
+- **ESLint** – Linting
+- **@vitejs/plugin-react** – React + Vite integration
+- **TypeScript types for React**
+
+---
+
+## 📜 Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run ESLint
+```
