@@ -162,9 +162,12 @@ const Canvas = ({
     const formData = new FormData();
     formData.append("image", blob, "drawing.png");
 
+    const serverUrl =
+      import.meta.env.VITE_SERVER_URL || "http://localhost:3000/";
+
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}api/calc-from-image`,
+        `${serverUrl}api/calc-from-image`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

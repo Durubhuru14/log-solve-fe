@@ -1,7 +1,6 @@
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import GitBadge from "../components/GitBadge"
+import { Footer, GitBadge } from "../components";
 
 const Home = () => {
   return (
@@ -20,7 +19,11 @@ const Home = () => {
           >
             Get Started!
           </Link>
-          <a className="text-blue-500 border border-blue-500 rounded-md p-2 cursor-pointer transition-colors hover:bg-blue-500 hover:text-gray-100">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 border border-blue-500 rounded-md p-2 cursor-pointer transition-colors hover:bg-blue-100 hover:text-blue-700"
+          >
             New Here?
           </a>
         </div>

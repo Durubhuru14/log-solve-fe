@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Canvas from "../components/Canvas";
-import Toolbox from "../components/Toolbox";
+import { Canvas, Toolbox } from "../components";
 
 const Draw = () => {
   const [tool, setTool] = useState("pen");
