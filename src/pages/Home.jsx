@@ -22,6 +22,7 @@ const Home = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
+            src="https://vintage-shamrock-645.notion.site/Log-Solve-Tutorial-Somewhat-38ec0e33690a8020b9f0e25a58419df8"
             className="text-blue-500 border border-blue-500 rounded-md p-2 cursor-pointer transition-colors hover:bg-blue-100 hover:text-blue-700"
           >
             New Here?
